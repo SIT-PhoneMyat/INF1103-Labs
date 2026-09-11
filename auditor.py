@@ -2,7 +2,7 @@ inventory=0
 failed_entries = 0
 
 while True:
-    stock_quantity = input("Enter stock quantity: ")
+    stock_quantity = input("Enter stock quantity (type 'quit' to exit): ")
 
     if stock_quantity.lower() == "quit":
         break
@@ -19,6 +19,10 @@ while True:
 
     else:
         inventory += int(stock_quantity)
+
+        if inventory > 500:
+            print("Warning: Inventory exceeds maximum capacity of 500 units! Processing will stop.")
+            break
 
 print("\n--- Daily Delivery Report ---")
 print(f"Total Units Processed: {inventory}")
