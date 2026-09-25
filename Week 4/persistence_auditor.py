@@ -1,6 +1,6 @@
 from pathlib import Path
 
-path = Path("Week 4/inventory.txt") # idk why adding "Week 4" in the path can make it detectable
+path = Path("inventory.txt") # idk why adding "Week 4" in the path can make it detectable
 print("Path: ", path)
 
 def load_inventory():

@@ -2,8 +2,6 @@
 1002, Keyboard, 1
 1003, USB Cable, 3
 1004, Laptop Stand, 2
-1005, Mouse Pad, 4
-1006, Gaming Chair, 1
-1007, Monitor, 1
-1008, Laptop Fan, 1
-1009, Desk, 2
+1005, Gaming Chair, 3
+1006, Laptop Fan, 3
+1007, Mouse Pad, 2
