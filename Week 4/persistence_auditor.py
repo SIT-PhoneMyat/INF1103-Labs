@@ -14,8 +14,12 @@ def load_inventory():
     else:
         return None # if empty, the order id will start at 1001
 
-def save_inventory():
-    pass
+def save_inventory(order):
+    with path.open("a") as file:
+        file.write("\n" + order)
+
+last_order_id = load_inventory() 
+# print("\nLast Order ID:", last_order_id)
 
 while True:
     product_name = input("Enter product name: ")
