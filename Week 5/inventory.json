@@ -1,0 +1,20 @@
+[
+    {
+        "product_id": "P004",
+        "product_name": "Monitor",
+        "price": 120.0,
+        "stock_quantity": 5
+    },
+    {
+        "product_id": "P005",
+        "product_name": "Laptop",
+        "price": 1400.0,
+        "stock_quantity": 10
+    },
+    {
+        "product_id": "P006",
+        "product_name": "Mouse",
+        "price": 60.0,
+        "stock_quantity": 7
+    }
+]
