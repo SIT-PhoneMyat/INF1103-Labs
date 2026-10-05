@@ -16,5 +16,11 @@
         "product_name": "Mouse",
         "price": 60.0,
         "stock_quantity": 7
+    },
+    {
+        "product_id": "P007",
+        "product_name": "Keyboard",
+        "price": 66.66,
+        "stock_quantity": 10
     }
 ]
