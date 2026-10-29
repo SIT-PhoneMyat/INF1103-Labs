@@ -29,14 +29,21 @@ while True:
 
     match choice:
         case "1":
+            print(NEW_LINE)
             products = inventory.display_all()
             if not products:
-                print("Inventory is empty.")
+                print("No products in inventory." + NEW_LINE)
+                print("------------------------------------------------" + NEW_LINE)
+                continue
+            print(NEW_LINE + "Current Inventory")
+            print("------------------------------------------------")
             for product in products:
-                product.display_information()
-                print(NEW_LINE)
+                print(f"ID: {product.product_id} | Name: {product.name} | Price: ${product.price:.2f} | Stock: {product.stock_quantity}")
+            print("------------------------------------------------")
+            print(NEW_LINE)
         case "2":
-            product_id = input("Enter product ID: ").strip()
+            print(NEW_LINE + "Add New Product")
+            product_id = input("Product ID: ").strip()
             if not product_id:
                 print("Product ID cannot be empty.")
                 continue
@@ -44,17 +51,17 @@ while True:
                 print("A product with this ID already exists.")
                 continue
 
-            name = input("Enter product name: ").strip()
+            name = input("Product Name: ").strip()
             if not name:
                 print("Product name cannot be empty.")
                 continue
 
             try:
-                price = float(input("Enter product price: "))
+                price = float(input("Price: "))
                 if not isfinite(price) or price < 0:
                     print("Price must be a finite, non-negative number.")
                     continue
-                stock_quantity = int(input("Enter stock quantity: "))
+                stock_quantity = int(input("Stock Quantity: "))
                 if stock_quantity < 0:
                     print("Stock quantity cannot be negative.")
                     continue
@@ -64,37 +71,55 @@ while True:
 
             product = Product(product_id, name, price, stock_quantity)
             inventory.add_product(product)
-            print("Product added successfully.")
+            print(NEW_LINE + "Product added successfully!" + NEW_LINE)
         case "3":
-            product_id = input("Enter product ID: ").strip()
-            product = inventory.search_product(product_id)
-            if product is None:
+            print(NEW_LINE + "Update Stock")
+            product_id = input("Enter Product ID: ").strip()
+            print(NEW_LINE)
+            products = inventory.display_all()
+            matches = [product for product in products if product.product_id == product_id]
+            if not products:
+                print("No items in the inventory.")
+            elif not matches:
                 print("Product not found.")
-                continue
-
-            try:
-                new_quantity = int(input("Enter new stock quantity: "))
-                if new_quantity < 0:
-                    print("Stock quantity cannot be negative.")
+            for product in matches:
+                print("Product Found:")
+                print("Name: " + product.name)
+                print("Current Stock: " + str(product.stock_quantity))
+                print(NEW_LINE)
+                try:
+                    new_quantity = int(input("New Stock Quantity: "))
+                    if new_quantity < 0:
+                        print("Stock quantity cannot be negative.")
+                        continue
+                except ValueError:
+                    print("Stock quantity must be a whole number.")
                     continue
-            except ValueError:
-                print("Stock quantity must be a whole number.")
-                continue
-
-            product.update_stock(new_quantity)
-            print("Stock updated successfully.")
+                product.update_stock(new_quantity)
+                print(NEW_LINE)
+                print("Stock updated successfully!")
+            print(NEW_LINE)
         case "4":
-            product_id = input("Enter product ID: ").strip()
-            product = inventory.search_product(product_id)
-            if product is None:
-                print("Product not found.")
-            else:
+            print(NEW_LINE + "Search Product")
+            product_id = input("Enter Product ID: ").strip()
+            matches = [product for product in inventory.display_all() if product.product_id == product_id]
+            for product in matches:
+                print(NEW_LINE + "Product Found")
+                print("------------------------------------------------")
                 product.display_information()
+                print("------------------------------------------------")
+            if not matches:
+                print("Product with ID " + product_id + " is not found.")
+            print(NEW_LINE)
         case "5":
             inventory.save_inventory()
         case "6":
-            inventory.save_inventory()
-            print("Goodbye!")
+            if not inventory.save_inventory():
+                continue
+            print("Program is now terminating...")
+            print(NEW_LINE + "Thank you for using Inventory Management System.")
+            print("Program terminated.")
+            print(NEW_LINE)
             break
         case _:
             print("Invalid option. Please try again.")

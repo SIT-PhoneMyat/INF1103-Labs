@@ -14,7 +14,7 @@ class Product:
         print(f"ID: {self.product_id}")
         print(f"Name: {self.name}")
         print(f"Price: {self.price}")
-        print(f"Stock Quantity: {self.stock_quantity}")
+        print(f"Stock: {self.stock_quantity}")
 
     # Getters and Setters below
 

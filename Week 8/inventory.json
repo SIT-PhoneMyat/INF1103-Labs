@@ -1,0 +1,14 @@
+[
+    {
+        "product_id": "1001",
+        "product_name": "Monitor",
+        "price": 300.0,
+        "stock_quantity": 4
+    },
+    {
+        "product_id": "1002",
+        "product_name": "Mouse",
+        "price": 30.0,
+        "stock_quantity": 4
+    }
+]
