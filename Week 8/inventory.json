@@ -9,6 +9,12 @@
         "product_id": "1002",
         "product_name": "Mouse",
         "price": 30.0,
+        "stock_quantity": 6
+    },
+    {
+        "product_id": "1003",
+        "product_name": "Keyboard",
+        "price": 20.0,
         "stock_quantity": 4
     }
 ]

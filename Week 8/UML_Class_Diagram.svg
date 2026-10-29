@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="820" viewBox="0 0 1500 820" role="img" aria-labelledby="title description">
+  <title id="title">Week 8 UML Class Diagram</title>
+  <desc id="description">Inventory aggregates zero or more Product objects. Two class boxes show private fields and public operations and properties.</desc>
+  <style>
+    text { font-family: 'Segoe UI', Arial, sans-serif; fill: #172b4d; }
+    .title { font-size: 30px; font-weight: 700; }
+    .heading { font-size: 25px; font-weight: 700; }
+    .member { font-family: Consolas, monospace; font-size: 18px; }
+    .note { font-size: 18px; fill: #42526e; }
+    .line { stroke: #263b53; stroke-width: 2; fill: none; }
+  </style>
+  <rect width="1500" height="820" fill="#ffffff"/>
+  <text x="60" y="60" class="title">Week 8 · Inventory Management System</text>
+  <text x="60" y="94" class="note">UML class diagram</text>
+
+  <rect x="60" y="150" width="570" height="460" fill="#f8fafc" stroke="#263b53" stroke-width="2"/>
+  <rect x="61" y="151" width="568" height="58" fill="#e3edf9"/>
+  <text x="345" y="189" text-anchor="middle" class="heading">Inventory</text>
+  <path d="M60 210 H630 M60 330 H630" class="line"/>
+  <g class="member">
+    <text x="80" y="245">- __inventory: Path</text>
+    <text x="80" y="277">- __all_products: list[Product]</text>
+    <text x="80" y="309">- __load_failed: bool</text>
+    <text x="80" y="367">+ __init__(inventory_path="inventory.json")</text>
+    <text x="80" y="409">+ add_product(product: Product): None</text>
+    <text x="80" y="451">+ search_product(product_id: str):</text>
+    <text x="102" y="478">Product | None</text>
+    <text x="80" y="515">+ display_all(): list[Product]</text>
+    <text x="80" y="552">+ load_inventory(): bool</text>
+    <text x="80" y="589">+ save_inventory(): bool</text>
+  </g>
+
+  <rect x="860" y="150" width="580" height="530" fill="#f8fafc" stroke="#263b53" stroke-width="2"/>
+  <rect x="861" y="151" width="578" height="58" fill="#e3edf9"/>
+  <text x="1150" y="189" text-anchor="middle" class="heading">Product</text>
+  <path d="M860 210 H1440 M860 508 H1440" class="line"/>
+  <g class="member">
+    <text x="880" y="245">- __product_id: str</text>
+    <text x="880" y="277">- __name: str</text>
+    <text x="880" y="309">- __price: float</text>
+    <text x="880" y="341">- __stock_quantity: int</text>
+    <text x="880" y="380">+ product_id: str {get, set}</text>
+    <text x="880" y="412">+ name: str {get, set}</text>
+    <text x="880" y="444">+ price: float {get, set}</text>
+    <text x="880" y="476">+ stock_quantity: int {get, set}</text>
+    <text x="880" y="545">+ __init__(product_id: str, name: str,</text>
+    <text x="902" y="574">price: float, stock_quantity: int)</text>
+    <text x="880" y="617">+ update_stock(new_quantity: int): None</text>
+    <text x="880" y="655">+ display_information(): None</text>
+  </g>
+
+  <path d="M630 290 L647 280 L664 290 L647 300 Z" fill="white" stroke="#263b53" stroke-width="2"/>
+  <path d="M664 290 H860" class="line"/>
+  <text x="748" y="265" text-anchor="middle" class="note">stores</text>
+  <text x="824" y="320" class="member">0..*</text>
+
+  <text x="60" y="722" class="note">+ Public    − Private    ◇ Aggregation: products can exist independently of the inventory.</text>
+  <text x="60" y="753" class="note">{get, set} denotes Python properties. Types show intended usage; loaded prices can also be integers.</text>
+  <text x="60" y="784" class="note">main.py is a script that creates and uses these objects; it is not a class.</text>
+</svg>

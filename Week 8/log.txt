@@ -1,0 +1,149 @@
+commit 9c0c5f64bf2381063e7a96f672ade52b95e34ca2
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 00:51:15 2026 +0800
+
+    Week 8 - Fixed bugs and added exception handling
+
+commit 128544fcff03ef8cc88fc09d56686318382aa31f
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 00:40:47 2026 +0800
+
+    Week 8 - Created main.py
+
+commit 476dc6a3c1ca683f1fa6b492663e81d94975f256
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 00:40:02 2026 +0800
+
+    Week 8 - Created Inventory class
+
+commit 50091487e70dbb2dc7a1ccb45d29fdea0abadc1b
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Oct 30 00:38:40 2026 +0800
+
+    Week 8 - Created Product class
+
+commit 335a3bf44f898040eb5fc375dd84a14c90698093
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Mon Oct 5 23:56:19 2026 +0800
+
+    Week 5 - Finalize everything
+
+commit 200d8a26f07fac1b630cd80ca12366f13724ce54
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Mon Oct 5 22:41:10 2026 +0800
+
+    Week 5 - Implement all methods in one go
+
+commit d6710a61ad1e3387331cfa26d98419a605dc821a
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Sat Oct 3 22:33:11 2026 +0800
+
+    Week 5 - initalization
+
+commit a75b08ffcb18e114d02e5ec03d05a4eb042ae88e
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 14:23:44 2026 +0800
+
+    Week 4 - Add zip file
+
+commit 46329d17acd209fcf88a6dc0c72201fa0585b87d
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 14:20:16 2026 +0800
+
+    Week 4 - Finalize Everything
+
+commit f8dbd742904cd172ae0bf023cf0e96c9481653a4
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 14:17:12 2026 +0800
+
+    Week 4 - Build Docker Image and Finalize the program
+
+commit 7508cde2450c87f3c677869b62eb015af200dfd0
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 13:59:00 2026 +0800
+
+    Week 4 - Fix bugs and finalize the program
+
+commit 4f303998b13f98b82ce4fd07cb7fb43e3bc14b98
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 13:39:06 2026 +0800
+
+    Week 4 - Track history and save new order
+
+commit ce5de8267e47458c6a020d8a335d1a204e21c32b
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 13:37:31 2026 +0800
+
+    Week 4 - Implement save inventory
+
+commit 254bedb9b536e89662aadafd70a95f1a2298c779
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 13:36:44 2026 +0800
+
+    Week 4 - Implement load inventory
+
+commit c28bc7b3c6b03862c1d9cf778f47e75782c5f532
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 25 13:34:24 2026 +0800
+
+    Week 4 - Initial Program Setup
+
+commit e95cda8e2c0ee9f73d66ce48ed171805bf970694
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Mon Sep 21 20:27:25 2026 +0800
+
+    Remove old README file
+
+commit d765e10b1ecf3eb7014dfd3bda677f5ac32e2c52
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Mon Sep 21 20:21:08 2026 +0800
+
+    Rename the readme file
+
+commit b29bfe5ca32e2e0de357f79e8f9bea513d751754
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Mon Sep 21 20:19:35 2026 +0800
+
+    Added a README file
+
+commit 690ab19a7171070b6c9c053e451706ad5d4885fe
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Mon Sep 21 20:12:33 2026 +0800
+
+    Organize Labs by week and Add week 3
+
+commit 9c664e6911bf6bf3c1a5def55b65b18f52d9abf2
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 16:24:00 2026 +0800
+
+    Finalizing Practical 2
+
+commit 1860b2fc160b3b7cfadcbcffad579b911d092629
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 11:48:34 2026 +0800
+
+    Add Dockerfile for inventory auditor
+
+commit f08c70a800feb8faf895c167bf1338362f199367
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 11:13:47 2026 +0800
+
+    Added Business Rules
+
+commit 6093728a4a2668f8e1057a20e46bff64ec29d511
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 11:10:36 2026 +0800
+
+    Added User Input Handling
+
+commit 86fff41aa9e3ea54916d885e2a613af7e88d6e15
+Author: SIT-PhoneMyat <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 11:05:55 2026 +0800
+
+    Initial Inventory Program Setup
+
+commit b7678f6be211b6429c605fb196dedaa508ddbd49
+Author: Phone Myat Pyae Sone <2604706@sit.singaporetech.edu.sg>
+Date:   Fri Sep 11 11:25:55 2026 +0800
+
+    Initial commit
