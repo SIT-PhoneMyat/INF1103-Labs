@@ -1,0 +1,26 @@
+[
+    {
+        "product_id": "1001",
+        "product_name": "Mouse",
+        "price": 180.0,
+        "stock_quantity": 34,
+        "type": "physical",
+        "weight": 0.1
+    },
+    {
+        "product_id": "1002",
+        "product_name": "Anti-Virus Software",
+        "price": 18.0,
+        "stock_quantity": 999,
+        "type": "digital",
+        "download_size": 38.0
+    },
+    {
+        "product_id": "1003",
+        "product_name": "Keyboard",
+        "price": 100.0,
+        "stock_quantity": 23,
+        "type": "physical",
+        "weight": 0.2
+    }
+]
