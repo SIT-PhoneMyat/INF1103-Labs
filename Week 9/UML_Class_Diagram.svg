@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1250" viewBox="0 0 1800 1250" role="img" aria-labelledby="title desc">
+<title id="title">Week 9 UML Class Diagram</title>
+<desc id="desc">Product is abstract. PhysicalProduct and DigitalProduct inherit Product. PhysicalProduct realises CanBeShipped. Inventory manages zero or more products.</desc>
+<style>text {font-family:Segoe UI,Arial,sans-serif;fill:#172b4d} .member {font-family:Consolas,monospace;font-size:17px} .note {font-size:18px;fill:#42526e} .line {fill:none;stroke:#263b53;stroke-width:2} .heading {font-size:25px;font-weight:700}</style>
+<defs><marker id="triangle" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="14" markerHeight="14" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 L13 7 L1 13 Z" fill="white" stroke="#263b53" stroke-width="1.5"/></marker></defs>
+<rect width="1800" height="1250" fill="white"/>
+<text x="40" y="55" font-size="32" font-weight="700">Week 9 ? Inventory Management System</text>
+<text x="40" y="92" class="note">Inheritance, method overriding, abstract classes and an interface-style ABC</text>
+<rect x="40" y="160" width="520" height="182" fill="#f8fafc" stroke="#263b53" stroke-width="2"/>
+<rect x="41" y="161" width="518" height="79" fill="#e3edf9"/>
+<text x="300.0" y="186" class="note" text-anchor="middle">&lt;&lt;interface&gt;&gt;  &lt;&lt;abstract&gt;&gt;</text>
+<text x="300.0" y="221" class="heading" text-anchor="middle">CanBeShipped</text>
+<path d="M40 240 h520 M40 264 h520" class="line"/>
+<text x="58" y="292" class="member" >+ calculate_shipping_cost(): float</text>
+<text x="58" y="319" class="member" font-style="italic">  &lt;&lt;abstract&gt;&gt;</text>
+<rect x="640" y="160" width="520" height="479" fill="#f8fafc" stroke="#263b53" stroke-width="2"/>
+<rect x="641" y="161" width="518" height="79" fill="#e3edf9"/>
+<text x="900.0" y="186" class="note" text-anchor="middle">&lt;&lt;abstract&gt;&gt;</text>
+<text x="900.0" y="221" class="heading" text-anchor="middle" font-style="italic">Product</text>
+<path d="M640 240 h520 M640 372 h520" class="line"/>
+<text x="658" y="268" class="member" >- __product_id: str</text>
+<text x="658" y="295" class="member" >- __name: str</text>
+<text x="658" y="322" class="member" >- __price: float</text>
+<text x="658" y="349" class="member" >- __stock_quantity: int</text>
+<text x="658" y="400" class="member" >+ __init__(product_id, name, price,</text>
+<text x="658" y="427" class="member" >    stock_quantity)</text>
+<text x="658" y="454" class="member" >+ update_stock(new_quantity): None</text>
+<text x="658" y="481" class="member" >+ display_information(): None</text>
+<text x="658" y="508" class="member" font-style="italic">+ get_fulfilment_info(): str &lt;&lt;abstract&gt;&gt;</text>
+<text x="658" y="535" class="member" >+ product_id: str {get, set}</text>
+<text x="658" y="562" class="member" >+ name: str {get, set}</text>
+<text x="658" y="589" class="member" >+ price: float {get, set}</text>
+<text x="658" y="616" class="member" >+ stock_quantity: int {get, set}</text>
+<rect x="1240" y="160" width="520" height="378" fill="#f8fafc" stroke="#263b53" stroke-width="2"/>
+<rect x="1241" y="161" width="518" height="59" fill="#e3edf9"/>
+<text x="1500.0" y="201" class="heading" text-anchor="middle">Inventory</text>
+<path d="M1240 220 h520 M1240 325 h520" class="line"/>
+<text x="1258" y="248" class="member" >- __inventory: Path</text>
+<text x="1258" y="275" class="member" >- __all_products: list[Product]</text>
+<text x="1258" y="302" class="member" >- __load_failed: bool</text>
+<text x="1258" y="353" class="member" >+ __init__(inventory_path=None)</text>
+<text x="1258" y="380" class="member" >+ add_product(product: Product): None</text>
+<text x="1258" y="407" class="member" >+ search_product(product_id: str):</text>
+<text x="1258" y="434" class="member" >    Product | None</text>
+<text x="1258" y="461" class="member" >+ display_all(): list[Product]</text>
+<text x="1258" y="488" class="member" >+ load_inventory(): bool</text>
+<text x="1258" y="515" class="member" >+ save_inventory(): bool</text>
+<rect x="340" y="760" width="520" height="324" fill="#f8fafc" stroke="#263b53" stroke-width="2"/>
+<rect x="341" y="761" width="518" height="59" fill="#e3edf9"/>
+<text x="600.0" y="801" class="heading" text-anchor="middle">PhysicalProduct</text>
+<path d="M340 820 h520 M340 898 h520" class="line"/>
+<text x="358" y="848" class="member" >- __weight: float</text>
+<text x="358" y="875" class="member" >+ SHIPPING_RATE_PER_KG: float = 5.0</text>
+<text x="358" y="926" class="member" >+ __init__(product_id, name, price,</text>
+<text x="358" y="953" class="member" >    stock_quantity, weight)</text>
+<text x="358" y="980" class="member" >+ display_information(): None</text>
+<text x="358" y="1007" class="member" >+ get_fulfilment_info(): str</text>
+<text x="358" y="1034" class="member" >+ calculate_shipping_cost(): float</text>
+<text x="358" y="1061" class="member" >+ weight: float {get, set}</text>
+<rect x="940" y="760" width="520" height="270" fill="#f8fafc" stroke="#263b53" stroke-width="2"/>
+<rect x="941" y="761" width="518" height="59" fill="#e3edf9"/>
+<text x="1200.0" y="801" class="heading" text-anchor="middle">DigitalProduct</text>
+<path d="M940 820 h520 M940 871 h520" class="line"/>
+<text x="958" y="848" class="member" >- __download_size: float</text>
+<text x="958" y="899" class="member" >+ __init__(product_id, name, price,</text>
+<text x="958" y="926" class="member" >    stock_quantity, download_size)</text>
+<text x="958" y="953" class="member" >+ display_information(): None</text>
+<text x="958" y="980" class="member" >+ get_fulfilment_info(): str</text>
+<text x="958" y="1007" class="member" >+ download_size: float {get, set}</text>
+<path d="M740 760 V700 H900 V639" class="line" marker-end="url(#triangle)"/>
+<path d="M1100 760 V700 H900" class="line"/>
+<path d="M470 760 V650 H300 V342" class="line" stroke-dasharray="9 6" marker-end="url(#triangle)"/>
+<text x="70" y="540" class="note" >realises shipping contract</text>
+<path d="M1500 538 V620 H1160" class="line"/>
+<text x="1350" y="605" class="note" text-anchor="middle">manages</text>
+<text x="1175" y="646" class="note" >0..*</text>
+<text x="1512" y="567" class="note" >0..*</text>
+<text x="40" y="1160" class="note" >+ public    ? private    {get, set} property    Italic / &lt;&lt;abstract&gt;&gt; operation: must be implemented</text>
+<text x="40" y="1195" class="note" >Solid line + hollow triangle: inheritance   |   Dashed line + hollow triangle: interface realisation</text>
+<text x="40" y="1228" class="note" >Association: Inventory holds Product objects; products may be shared. Types describe intended values; constructors omit self.</text>
+</svg>
